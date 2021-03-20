@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">課程報你知</string>
+    <string name="title_home">首頁</string>
+    <string name="title_search">查詢課程</string>
+    <string name="title_follow">正在追蹤</string>
+    <string name="search">以課程、老師、上課時間搜尋</string>
+    <string name="title_user_navigation">使用者導覽頁面</string>
+</resources>

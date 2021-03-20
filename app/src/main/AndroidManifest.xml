@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tcftu.user.tcftuApp">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.tcftu.user.tcftuApp.userNavigation"
+            android:label="@string/title_user_navigation"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="com.tcftu.user.tcftuApp.WelcomeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" /> <!-- 決定應用程式最先啟動的Activity -->
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- 決定應用程式是否顯示在程序列表裡 -->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.tcftu.user.tcftuApp.MainActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name="com.tcftu.user.tcftuApp.Main2Activity"
+            android:label="@string/title_follow"
+            android:theme="@style/Fllow">
+        </activity>
+
+        <activity
+            android:name="com.tcftu.user.tcftuApp.Main3Activity"
+            android:label="@string/title_search"
+            android:launchMode="singleTop"
+            android:theme="@style/Search">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <receiver android:name="com.tcftu.user.tcftuApp.AlarmNotificationReceiver" />
+        <receiver android:name="com.tcftu.user.tcftuApp.TimeUpDeleteDataReceiver" />
+        <receiver android:name="com.tcftu.user.tcftuApp.TimeUpDeleteDataReceiver1" />
+
+
+    </application>
+
+</manifest>
